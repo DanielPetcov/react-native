@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text, SafeAreaView, SafeAreaViewComponent } from 'react-native';
+import { View, Text, SafeAreaView, SafeAreaViewComponent, Pressable } from 'react-native';
 import { StyleSheet } from 'react-native';
 import Colors from '../assets/colors/colors'
-function WelcomeScreen() {
+function WelcomeScreen({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>hello from DOT</Text>
+            <Pressable onPress={navigation.navigate("login")} >
+                <Text style={styles.text}>hello from DOT</Text>
+            </Pressable>
+            
         </SafeAreaView>
     );
 }

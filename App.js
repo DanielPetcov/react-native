@@ -8,16 +8,16 @@ import ChatScreen from "./app/screens/ChatScreen"
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+
+
 const Stack = createNativeStackNavigator();
 export default function App(){
     return (
-
-     <NavigationContainer>
+      <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="welcome" component />
-            
-          
+          <Stack.Screen name="welcome" component={WelcomeScreen} />
+          <Stack.Screen name="login" component={LoginScreen} />
         </Stack.Navigator>
-     </NavigationContainer>
+      </NavigationContainer>
   )
 }
